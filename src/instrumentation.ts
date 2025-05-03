@@ -1,5 +1,7 @@
 import * as Sentry from "@sentry/nextjs";
 
-export function register() {
-  Sentry.init({});
+export async function register() {
+  Sentry.init({
+    dsn: "https://foo@bar.ingest.us.sentry.io/42",
+  });
 }
